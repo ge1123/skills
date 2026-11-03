@@ -1,6 +1,6 @@
 ---
 name: design-draft
-description: "Create or revise static visual design drafts from requirements, including interface screens, posters, infographics, and presentation layouts. Use for visual proposals and design review rather than product implementation."
+description: "Create or revise static visual design drafts from requirements, including interface screens, posters, infographics, and presentation layouts. Use for visual proposals, design review, and product handoff with behavior specifications and acceptance scenarios."
 ---
 
 # 需求轉設計稿
@@ -12,6 +12,16 @@ description: "Create or revise static visual design drafts from requirements, in
 沿用使用者已提供的內容、參考、品牌與偏好。當用途、尺寸、主要內容或視覺方向的缺漏會實質影響設計，而且無法合理推定時，集中詢問關鍵項目；資訊足夠則直接製作。使用者若明確要求先詢問，先完成需求確認再開始。
 
 選擇畫板尺寸、資訊密度與展示方式時，以實際用途為準。不要把範例的品牌、產業、深色風格或桌面尺寸帶入其他任務。沒有實際資料時使用前後一致的示意內容，並標示其為示意。
+
+## 產品還原與實作交接
+
+當設計稿用來還原產品或交給他人實作時，將行為規格放進交付物，並從預覽連到規格。單純視覺提案、海報與簡報可略過此節。用靜態分鏡、文字或表格描述互動即可。
+
+- 從使用者要完成的任務串起畫面。對每個關鍵轉折寫明起始條件、觸發動作、畫面回饋及資料結果；依任務涵蓋等待、失敗、重試、離開與重新開啟。拖曳、焦點或手機返回等難從單張圖判讀的操作，用前後畫面標註。
+- 同一筆資料跨功能時，說清楚可見性、關聯與復原規則。已有 API 或 schema 時，連到相關畫面、端點及資料欄位；用具體輸入、成功或失敗回應和操作後的狀態說明其對使用者的影響。
+- 對影響實作的規則註明依據，區分原版實測、文件記載、設計決策與待確認事項。若資料只足以證明存在更新端點，就把儲存時機列為待確認。新產品可提出預設行為；還原案要保留未知之處。
+- 用固定示例資料為核心流程寫可重現的驗收案例，包含前置狀態、步驟、可觀察結果，以及涉及持久化時重開後的結果。例如用同一筆記驗收「編輯後立即切換，再回來」和「儲存失敗後重試」，分別寫出正文、儲存提示及最後保存的內容。待確認的預期結果標示為未定，已撰寫與已實測的案例分開標記。
+- 交付前從實作者角度走讀案例：只用稿內資訊，能否判定每一步該顯示什麼、資料如何變化、何時算通過？將無法判定且影響核心任務的問題集中列在對應流程旁。
 
 ## 選擇製作方式
 
