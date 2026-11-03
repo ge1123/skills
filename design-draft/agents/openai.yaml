@@ -1,0 +1,4 @@
+interface:
+  display_name: "需求轉設計稿"
+  short_description: "將需求轉為可編輯的靜態設計稿，按構圖與排版需求選擇適合技術"
+  default_prompt: "使用 $design-draft，依我的需求製作可檢視與修改的靜態設計稿，先選擇合適的呈現方式。"
